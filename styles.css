@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #040440;
+    background: #007bff;
     color: white;
     padding: 15px;
     display: flex;
@@ -22,18 +22,54 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 10px;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+    display: block;
 }
 
+/* Estilo del submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0056b3;
+    list-style: none;
+    padding: 10px;
+    width: 180px;
+    border-radius: 5px;
+}
+
+.submenu li {
+    text-align: left;
+}
+
+.submenu li a {
+    color: white;
+    padding: 8px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background: #004494;
+}
+
+/* Mostrar submenú cuando se pasa el mouse */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Menú hamburguesa */
 .menu-toggle {
     background: none;
     border: none;
@@ -43,37 +79,6 @@ nav ul li a {
     display: none;
 }
 
-#hero {
-    padding: 50px;
-    background: #f4f4f4;
-}
-
-.course-list {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.course-item {
-    background: #040440;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.course-item a {
-    color: white;
-    text-decoration: none;
-}
-
-footer {
-    margin-top: 20px;
-    background: #333;
-    color: white;
-    padding: 10px;
-}
-
-/* Estilos para móviles */
 @media (max-width: 600px) {
     .menu-toggle {
         display: block;
@@ -82,7 +87,7 @@ footer {
     nav ul {
         display: none;
         flex-direction: column;
-        background: #040440;
+        background: #007bff;
         position: absolute;
         width: 100%;
         top: 50px;
@@ -90,12 +95,18 @@ footer {
         padding: 10px 0;
     }
 
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
     nav ul.show {
         display: flex;
     }
+
+    .submenu {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown.active .submenu {
+        display: block;
+    }
 }
+
