@@ -1,3 +1,7 @@
+function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("show");
+}
+
 function verMas() {
-    alert("¡Contáctanos para más información!");
+    alert("¡Más información próximamente!");
 }
