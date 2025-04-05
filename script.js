@@ -1,7 +1,5 @@
 function toggleMenu() {
-    let menu = document.getElementById("menu");
-    menu.classList.toggle("visible");
-    menu.classList.toggle("hidden");
+    document.querySelector("nav ul").classList.toggle("show");
 }
 
 function verMas() {
