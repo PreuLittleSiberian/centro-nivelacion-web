@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #007bff;
+    background: #000080;
     color: white;
     padding: 15px;
     display: flex;
@@ -56,7 +56,7 @@ nav ul li a {
 }
 
 .course-item {
-    background: #007bff;
+    background: #000080;
     padding: 15px;
     border-radius: 5px;
 }
@@ -82,7 +82,7 @@ footer {
     nav ul {
         display: none;
         flex-direction: column;
-        background: #007bff;
+        background: #000080;
         position: absolute;
         width: 100%;
         top: 50px;
